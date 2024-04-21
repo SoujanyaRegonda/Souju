@@ -1,0 +1,38 @@
+[
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testGetRecipes"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testgetNotfound"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testGetRecipeById"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testPostRecipe"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testAfterPost"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testPutNotfound"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testPut"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testAfterPut"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testDeleteNotfound"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testDelete"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.RecipeControllerTests.testAfterDelete"
+    },
+    {
+        "test_case_name_enum": "com.example.recipe.SmokeTest.contextLoads"
+    }
+]
