@@ -7,10 +7,13 @@ import com.example.recipe.RecipeRepository;
 
 import com.example.recipe.Recipe;
 
+
 import java.util.*;
 
 // Don't modify the below code
+
 import javax.validation.OverridesAttribute;
+
 
 public class RecipeService implements RecipeRepository {
 
@@ -32,7 +35,7 @@ public class RecipeService implements RecipeRepository {
 
         // Don't modify the above code
         int uniqueRecipeId = 6;
-        @Override
+        @Override   
         public ArrayList<Recipe> getAllRecipes() {
                 Collection<Recipe> recipeCollection = recipeBook.values();
                 ArrayList<Recipe> allrecipes = new ArrayList<>(recipeCollection);
@@ -43,21 +46,27 @@ public class RecipeService implements RecipeRepository {
                 Recipe recipe = recipeBook.get(recipeId);
                 if (recipe == null) {
                         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
                 }
                 return recipe;
         }
         @Override
         public Recipe addRecipe(Recipe recipe) {
                 recipe.setRecipeId(uniqueRecipeId);
+
                 recipeBook.put(uniqueRecipeId, recipe);
+
                 uniqueRecipeId += 1;
+
                 return recipe;
         }
         @Override
         public Recipe updateRecipe(int recipeId, Recipe recipe) {
                 Recipe existingRecipe = recipeBook.get(recipeId);
+
                 if (existingRecipe == null) {
                         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
                 }
                 if (recipe.getRecipeName() != null) {
                         existingRecipe.setRecipeName(recipe.getRecipeName());
@@ -79,10 +88,10 @@ public class RecipeService implements RecipeRepository {
                 Recipe recipe = recipeBook.get(recipeId);
                 if (recipe == null) {
                         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
                 } else {
                         recipeBook.remove(recipeId);
                         throw new ResponseStatusException(HttpStatus.NO_CONTENT);
                 }
         }
-
 }

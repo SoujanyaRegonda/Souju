@@ -2,7 +2,9 @@ package com.example.recipe;
 
 import org.springframework.web.bind.annotation.*;
 
+
 import com.example.recipe.RecipeService;
+
 
 import java.util.*;
 
@@ -18,7 +20,6 @@ public class RecipeController {
 
     @GetMapping("/recipes/{recipeId}")
     public Recipe getRecipeById(@PathVariable("recipeId") int recipeId) {
-
         return recipeService.getRecipeById(recipeId);
     }
 
@@ -29,11 +30,13 @@ public class RecipeController {
 
     @PutMapping("/recipes/{recipeId}")
     public Recipe updateRecipe(@PathVariable("recipeId") int recipeId, @RequestBody Recipe recipe) {
+
         return recipeService.updateRecipe(recipeId, recipe);
     }
 
     @DeleteMapping("/recipes/{recipeId}")
     public void deleteRecipe(@PathVariable("recipeId") int recipeId) {
+
         recipeService.deleteRecipe(recipeId);
     }
 

@@ -1,7 +1,7 @@
 // Write your code here
 package com.example.recipe;
 
-import java.util.List;
+import java.util.*;
 
 public class Recipe {
     private int recipeId;
